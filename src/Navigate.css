@@ -1,0 +1,56 @@
+/* Navigate.css */
+
+.navbar {
+    background-color: #3a3737;
+    /* Dark background color for navbar */
+    color: rgb(126, 29, 110);
+    /* Text color for navbar */
+    padding: 0px;
+    /* Padding around navbar */
+}
+
+.menus {
+    background-color: #f0f0f0;
+    /* Light background color for dropdown */
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    /* Border around the dropdown */
+    padding: 10px;
+    /* Padding inside dropdown */
+    display: none;
+    background-color: transparent;
+    /* Initially hide the dropdown */
+}
+
+.true {
+    display: block;
+    /* Show the dropdown when menuUse is true */
+}
+.profile{
+    height: 5px;
+    border-radius: 30px;
+}
+#searchicon{
+    width: 30px;
+}
+.brand-link{
+    margin-left: 5%;
+}
+#colornamehome{
+    background: linear-gradient(135deg, #9651f1, #4cc7e2, #e4557b, #f353ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none; /* Optional: removes underline from link */
+}
+#colornamesignup{
+    background: linear-gradient(135deg, #6936e9, #b7f448, #43edba, #e62b4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none; /* Optional: removes underline from link */
+}
+#colornamelogin{
+    background: linear-gradient(135deg, #6b07ef, #096fec, #e90cb9, #7df307);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none; /* Optional: removes underline from link */
+}

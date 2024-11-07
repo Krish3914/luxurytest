@@ -1,0 +1,103 @@
+main {
+    height: 100vh;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #54337f, #2b798b, #f34470, #a63da3);
+    /* background: red; */
+    /* background-size: 100%; */
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #4c2383, #0b4856, #840e2b, #9e0899);
+    /* background: linear-gradient(to right, #7c3bd0, #17859e, #456ee9, #b108ab), */
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+/* Style for the auth-container */
+.auth-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: transparent; /* Light background color */
+  padding: 0px;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.auth-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47%;
+  /* padding: 15px; */
+  gap: 0px;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 5px;
+}
+.auth-button img {
+  width: 17px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 5px; /* Space between the image and text */
+}
+
+
+.auth-button.google {
+  background: linear-gradient(135deg, #ccb4ec, #abe4f1, #e5a0b1, #c787c5); /* Google Blue */
+  color: rgb(135, 26, 26);
+}
+
+.auth-button.github {
+  background: linear-gradient(135deg, #1b5218, #195765, #637d22, #166e68); /* GitHub Dark Gray */
+  color: rgb(240, 243, 240);
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+}
+
+.auth-button.google:hover {
+  background-color: #357ae8; /* Darker Blue for hover effect */
+}
+
+.auth-button.github:hover {
+  background-color: #444; /* Darker Gray for hover effect */
+}
+
+/* Optional: Add icons to the buttons */
+.auth-button.google::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg');
+  margin-right: 10px;
+}
+
+.auth-button.github::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Github_mark.png');
+  margin-right: 10px;
+}

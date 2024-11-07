@@ -1,0 +1,250 @@
+section {
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e8927c, #99755a, #6d87b7, #5b939d);
+    /* background: red; */
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #4c2383, #0b4856, #840e2b, #9e0899);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    margin-top: 20px;
+}
+
+/* #ll {
+    height: 590px;
+} */
+/* Style for the auth-container */
+.auth-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: transparent; /* Light background color */
+  padding: 0px;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.auth-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47%;
+  /* padding: 15px; */
+  gap: 0px;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 5px;
+}
+.auth-button img {
+  width: 17px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 5px; /* Space between the image and text */
+}
+
+
+.auth-button.google {
+  background: linear-gradient(135deg, #ccb4ec, #abe4f1, #e5a0b1, #c787c5); /* Google Blue */
+  color: rgb(135, 26, 26);
+}
+
+.auth-button.github {
+  background: linear-gradient(135deg, #1b5218, #195765, #637d22, #166e68); /* GitHub Dark Gray */
+  color: rgb(240, 243, 240);
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+}
+
+.auth-button.google:hover {
+  background-color: #357ae8; /* Darker Blue for hover effect */
+}
+
+.auth-button.github:hover {
+  background-color: #444; /* Darker Gray for hover effect */
+}
+
+/* Optional: Add icons to the buttons */
+.auth-button.google::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg');
+  margin-right: 10px;
+}
+
+.auth-button.github::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/9/91/Github_mark.png');
+  margin-right: 10px;
+}
+
+
+/* 
+#loginBox {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#loginBox:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: #ff7e5f;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#loginBox:after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background: #feb47b;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #ff7e5f;
+    font-size: 2rem;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #ff7e5f;
+    box-shadow: 0 0 8px rgba(255, 126, 95, 0.3);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #aaa;
+}
+
+.input-box input:focus+label,
+.input-box input:not(:placeholder-shown)+label {
+    top: -0.75rem;
+    left: 1rem;
+    background: white;
+    padding: 0 0.25rem;
+    color: #ff7e5f;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #ff7e5f;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#errors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    color: #ff0000;
+}
+
+button {
+    background: #ff7e5f;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #feb47b;
+}
+     */
